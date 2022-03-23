@@ -1,0 +1,47 @@
+<div *ngIf="!isShow">
+
+    <form  [formGroup]="itemForm">
+        
+            <div class="input-group">
+                <div class="form-group">
+                    <label for="inputTitle" [ngClass]="{'required': checkField(itemForm.get('title')) }"><b>Name *</b></label>
+                    <input type="text" class="form-control" id="inputTitle" placeholder="Name" formControlName="title"  [ngClass]="{'required': checkField(itemForm.get('title')) }">    
+                </div>
+                <span  style="width: 100px;"></span>
+                <div class="form-group">
+                    
+                    <select style="border-style: none;" Saria-label="Default select example">
+                        <option selected><p style="font-weight: lighter;">Needs to sign</p></option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <span  style="width: 50px;"></span>
+                <div class="form-group">
+                    
+                    <select style="border-style: none;" Saria-label="Default select example">
+                        <option selected><p style="font-weight: lighter;">Customize</p></option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+              <div class="input-group">
+                  <div class="form-group">
+                    <label for="inputDescription"><b>Email *</b></label>
+                    <input type="text" class="form-control" id="inputDescription" placeholder="Email" formControlName="description">  
+                  </div>
+                 </div>
+              <p class="alert alert-warning" role="alert"  *ngIf="isProcessing">
+                  Please wait..
+              </p>
+              
+              <button  *ngIf="!isProcessing" type="button" class="btn btn-primary btn-block submitbutton" (click)="onSubmit($event)" [disabled]="!itemForm.valid && !isProcessing">{{getButtonText()}}</button>
+          
+    </form>
+
+    <mat-form-field></mat-form-field>
+</div>
+

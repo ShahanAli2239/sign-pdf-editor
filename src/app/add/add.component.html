@@ -1,0 +1,37 @@
+<div *ngIf="isShow"> 
+  <iframe>{{file?.image}}</iframe>
+ </div>
+<div class="main-container" *ngIf="!isShow">
+  <div id="top" style="font-size: 10px;">
+    <h2>Add Documents</h2>
+  </div>
+  <div class="container" appDnd (fileDropped)="onFileDropped($event)">
+    <br><br><br><br>
+    <div>
+      <input type="file" name="docProfile" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event)" />
+      <img src="assets/img/dnd/ic-upload-file.svg" alt="">
+      <h3>Drag and drop file here</h3>
+      <h3>or</h3>
+      <label for="fileDropRef">Browse for file</label>
+    </div>
+  </div>
+  <div id="bottom" style="font-size: 10px;">
+    <input type="checkbox"> I'm the only signer
+    <button mat-button class="button button1"  routerLink="/items">Next</button>
+  </div>
+</div>
+<div class="files-list">
+  <div class="single-file" *ngFor="let file of files; let i = index">
+    <img src="assets/img/dnd/ic-file.svg" width="45px" alt="file">
+    <div class="info">
+      <h4 class="name">
+        {{ file?.name }}
+      </h4>
+      <p class="size">
+        {{ formatBytes(file?.size) }}
+      </p>
+      <app-progress [progress]="file?.progress"></app-progress>
+    </div>
+    <img src="assets/img/dnd/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(i)">
+  </div>
+</div>

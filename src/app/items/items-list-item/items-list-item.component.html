@@ -1,0 +1,16 @@
+<mat-card>
+  <li *ngIf="item">
+      <Strong>{{ item.title }}</Strong>
+    <hr>
+    {{ item.description }}
+  
+    <div class="row" style="padding-top:10;">
+      <div class="col-md-6">
+        <button class='btn btn-primary btn-block' type='button' (click)="edit()">edit recipient</button>
+      </div>
+      <div class="col-md-6">
+        <button class='btn btn-danger btn-block' type='button' (click)="delete()">delete recipient</button>
+      </div>
+    </div>
+  </li>
+</mat-card>

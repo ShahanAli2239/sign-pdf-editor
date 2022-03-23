@@ -1,0 +1,279 @@
+<mat-drawer-container class="example-container" autosize>
+    
+    <div id="top" class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          Open Toolbar <mat-icon aria-hidden="false" aria-label="Example home icon">trending_flat</mat-icon>
+        </button>
+    </div> 
+
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <br><br><br><br><br><br>
+      
+        <div  cdkDrag>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">line_style</mat-icon>
+        </div><br>
+        <div  cdkDrag>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">spellcheck</mat-icon>
+         </div><br>
+         <div  cdkDrag>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">text_rotation_down</mat-icon>
+         </div><br>
+         
+         <div  cdkDrag>
+            <mat-icon aria-hidden="false" aria-label="Example home icon">text_rotate_up</mat-icon>
+         </div><br>
+         <div  cdkDrag>
+            <mat-icon matTooltip='sign' aria-hidden="false" aria-label="Example home icon">gesture</mat-icon>
+         </div>
+    </mat-drawer>
+  
+    
+  </mat-drawer-container>
+
+
+
+
+
+
+
+
+
+
+<!--<div class="main-container">
+    <div class="container">
+        <div class="row">
+            <div>
+                <h1>
+                    <span class="main-heading">
+                        Add Recipients
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-c1">
+                <span class="content-c1-s1">
+                    <span class="content-c1-s1-s11">
+                        <span class="content-c1-s1-s11-s111">
+                            <span class="content-c1-s1-s11-s111-s1111">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+                <div class="content-c1-d1">
+                    SENDER
+                </div>
+                <strong>
+                    Signer Name
+                </strong>
+            </div>
+            <div class="content-c1">
+                <span class="content-c1-s1">
+                    <span class="content-c1-s1-s11">
+                        <span class="content-c1-s1-s11-s111">
+                            <span class="content-c1-s1-s11-s111-s1111">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+                <div class="content-c1-d1">
+                    RECIPIENTS
+                </div>
+                <div class="css-goa2mv">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="max-width: 450px;"></div>
+                        <div style="display: flex; justify-content: flex-end;"></div>
+                    </div>
+                    <div data-qa="recipients-list" data-rbd-droppable-id="recipientList"
+                        data-rbd-droppable-context-id="0" style="max-width: 1000px;">
+                        <div data-qa="recipient-row" style="margin-bottom: 24px;">
+                            <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="58028327">
+                                <div data-callout="recipient-name">
+                                    <div class="css-116lp2a-RECIPIENT_CARD_ORDERED_CONTAINER_NARROW">
+                                        <div class="css-8jt6mt-RECIPIENT_CARD_CONTAINER">
+                                            <div class="css-33zfwu-RECIPIENT_COLOR"
+                                                style="background-color: rgb(255, 214, 91);"></div>
+                                            <div class="css-1vk0185-RECIPIENT_CARD_NARROW">
+                                                <div class="css-19n6z7y-RECIPIENT_CARD_NARROW_HEADER">
+                                                    <div></div>
+                                                    <div class="css-8mjctm-RECIPIENT_CARD_CONTROLS"
+                                                        style="margin-left: 0px; margin-top: 0px;">
+                                                        <div class="css-1uudw1n-RECIPIENT_CARD_MENU"
+                                                            style="margin-left: 0px;"><button data-qa="recipient-menu"
+                                                                class="olv-button olv-ignore-transform css-gqctlc"
+                                                                type="button" aria-haspopup="true"
+                                                                aria-expanded="false"><span
+                                                                    class="css-1ixbp0l">Customize</span><span
+                                                                    class="css-6hyn49"><span class="css-zf56fy"><span
+                                                                            aria-hidden="true" class="SVGInline"><svg
+                                                                                class="SVGInline-svg"
+                                                                                fill="currentColor"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 16 16" focusable="false">
+                                                                                <path d="M4 5h8l-4 6z"></path>
+                                                                            </svg></span></span></span></button></div>
+                                                    </div>
+                                                </div>
+                                                <ul class="css-12wa8ke-RECIPIENT_INPUT_LIST" style="margin-top: 0px;">
+                                                    <li style="margin-top: 0px;">
+                                                        <div style="display: flex; position: relative;">
+                                                            <div data-callout="identify-name-instructions-callout"
+                                                                style="width: 100%;">
+                                                                <div style="width: 100%;">
+                                                                    <div>
+                                                                        <div class="css-1itv5e3"><label for="ICUoLc-LGh"
+                                                                                data-qa="recipient-name-label"
+                                                                                class="css-jnb25c"><span
+                                                                                    aria-hidden="true">Name</span><span
+                                                                                    class="css-1am6aje">Name Recipient
+                                                                                    1</span><span aria-hidden="true"
+                                                                                    class="css-4b1bl7">*</span></label>
+                                                                        </div>
+                                                                        <div class="css-k008qs" style="width: 100%;">
+                                                                            <div
+                                                                                class="input-text-box-wrapper css-zbxljt">
+                                                                                <input data-qa="recipient-name"
+                                                                                    autocapitalize="off"
+                                                                                    autocomplete="off" id="ICUoLc-LGh"
+                                                                                    spellcheck="false" required=""
+                                                                                    type="text" class="css-1hknsoh"
+                                                                                    value="" role=" combobox"
+                                                                                    aria-expanded="false"
+                                                                                    aria-owns="_IlIrYZ1ru"
+                                                                                    aria-controls="_IlIrYZ1ru"
+                                                                                    aria-haspopup="listbox"
+                                                                                    aria-autocomplete="both"
+                                                                                    aria-activedescendant="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li style="margin-top: 20px;">
+                                                        <div
+                                                            style="display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start;">
+                                                            <div style="width: 100%; margin-top: 0px;">
+                                                                <div style="margin-bottom: 12px;">
+                                                                    <div style="width: 100%;">
+                                                                        <div>
+                                                                            <div class="css-1itv5e3"><label
+                                                                                    for="FnQDr10axy"
+                                                                                    data-qa="recipient-email-label"
+                                                                                    class="css-jnb25c"><span
+                                                                                        aria-hidden="true">Email</span><span
+                                                                                        class="css-1am6aje">Email
+                                                                                        Recipient 1</span><span
+                                                                                        aria-hidden="true"
+                                                                                        class="css-4b1bl7">*</span></label>
+                                                                            </div>
+                                                                            <div class="css-k008qs"
+                                                                                style="width: 100%;">
+                                                                                <div
+                                                                                    class="input-text-box-wrapper css-zbxljt">
+                                                                                    <input data-qa="recipient-email"
+                                                                                        autocapitalize="off"
+                                                                                        autocomplete="off"
+                                                                                        id="FnQDr10axy"
+                                                                                        spellcheck="false" required=""
+                                                                                        type="text" class="css-1hknsoh"
+                                                                                        value="" role=" combobox"
+                                                                                        aria-expanded="false"
+                                                                                        aria-owns="cFtf8o9mCD"
+                                                                                        aria-controls="cFtf8o9mCD"
+                                                                                        aria-haspopup="listbox"
+                                                                                        aria-autocomplete="both"
+                                                                                        aria-activedescendant="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="css-8mjctm-RECIPIENT_CARD_CONTROLS"
+                                                    style="margin-left: -10px; margin-top: 16px;">
+                                                    <div class="css-1xc5niq-RECIPIENT_ROLE_SELECT">
+                                                        <div><button data-qa="recipient-type" aria-haspopup="true"
+                                                                class="olv-button olv-ignore-transform css-s6cnqr"
+                                                                type="button" aria-expanded="false"><span
+                                                                    class="css-1k0renl"><span class="css-zf56fy"><span
+                                                                            aria-hidden="true" class="SVGInline"><svg
+                                                                                class="SVGInline-svg"
+                                                                                fill="currentColor"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                viewBox="0 0 16 16" focusable="false">
+                                                                                <path
+                                                                                    d="M16 16H0v-1h16zM13.8.3c.4.4.4 1 0 1.4L11 4.5c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4L12.4.3c.3-.4 1-.4 1.4 0zM1.4 9.9L0 14.1l4.2-1.4z">
+                                                                                </path>
+                                                                                <path
+                                                                                    d="M4.9 12L11 5.9l.5-.5.9-.9c.4-.4.4-1 0-1.4L11 1.7c-.4-.4-1-.4-1.4 0l-.9.9-6.6 6.6L4.9 12z">
+                                                                                </path>
+                                                                            </svg></span></span></span><span
+                                                                    class="css-1ixbp0l">Needs to Sign</span><span
+                                                                    class="css-f12cus"><span class="css-brvfq3"><span
+                                                                            class="css-zf56fy"><span aria-hidden="true"
+                                                                                class="SVGInline"><svg
+                                                                                    class="SVGInline-svg"
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    viewBox="0 0 16 16"
+                                                                                    focusable="false">
+                                                                                    <path d="M4 5h8l-4 6z"></path>
+                                                                                </svg></span></span></span></span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown" style="float:right;" style="display: flex;"><span class="dropdown" style="float:right;" class="css-1sbuogi"><button class="dropbtn" data-qa="recipients-add"
+                                class="olv-button olv-ignore-transform css-1ve11xo" type="button"><span
+                                    class="css-1k0renl"><span class="css-ps6lin"><span aria-hidden="true"
+                                            class="SVGInline"><svg class="SVGInline-svg" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                focusable="false">
+                                                <path
+                                                    d="M10.5 8.5c3 0 5.5 1.5 5.5 3V14H5v-2.5c0-1.5 2.5-3 5.5-3zm0-1a2.75 2.75 0 110-5.5 2.75 2.75 0 010 5.5zM0 3h2V1h2v2h2v2H4v2H2V5H0V3z">
+                                                </path>
+                                            </svg></span></span></span><span class="css-1ixbp0l">Add
+                                    Recipient</span></button><button class="dropbtn" data-qa="recipient-menu-arrow"
+                                class="olv-button olv-ignore-transform css-2kv0wd" type="button"
+                                aria-haspopup="true"><span class="css-1am6aje">Menu</span><span class="css-f10ht6"><span
+                                        class="css-ps6lin"><span aria-hidden="true" class="SVGInline"><svg
+                                                class="SVGInline-svg" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                                focusable="false">
+                                                <path d="M4 5h8l-4 6z"></path>
+                                            </svg></span></span></span></button></span>
+                                            </div>
+                </div>
+            </div>
+            <div class="content-c1">
+                <span class="content-c1-s1">
+                    <span class="content-c1-s1-s11">
+                        <span class="content-c1-s1-s11-s111">
+                            <span class="content-c1-s1-s11-s111-s1111">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="row2">
+
+        </div>
+    </div>
+</div>-->

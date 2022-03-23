@@ -1,0 +1,39 @@
+<div class="container">
+    
+  <div class="row">
+    
+    <div class="container-c1">
+      <h1>Review and Send</h1><br><br>
+      <h3>Message to Recipients</h3>
+      <br><br>
+      <form [formGroup]="FormData">
+        <div class="form-group">
+          <label for="fullname"><b>Email Subject*</b></label>
+          <input pInputTextArea [(ngModel)]="subject" (ngModelChange)="subjectChange(subject.length)" maxlength="1000" type="text" class="form-control" name="Fullname" placeholder="Email Subject" formControlName="Fullname">
+          <small class="form-text text-muted">Characters remaining: {{remainingSubjectText}}</small>
+        </div>
+        <div class="form-group">
+          <label for="comment"><b>Message</b></label>
+          <textarea pInputTextArea [(ngModel)]="message" (ngModelChange)="messageChange(message.length)" maxlength="1000" type="text"  class="form-control" formControlName="Comment" name="Comment"></textarea>
+          <small class="form-text text-muted">Characters remaining: {{remainingMessageText}}</small>
+        </div>
+        <br>
+        <div class="form-group">
+          <input type="checkbox">    Send automatic reminders
+        </div>
+        <!--<button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">Submit</button>-->
+      </form>
+      <div id="bottom" style="font-size: 10px;">
+        <button class="button button2"><b>PREVIEW</b> </button>
+        <button class="button button2" ><b>BACK</b> </button>
+        <button class="button button1"><B>SIGN NOW</B></button>
+      </div>
+    </div>
+    <div class="container-c2">
+      <mat-tab-group style="padding-left: 10px; margin-top: 0px;" >
+        <mat-tab label="SUMMARY"> Content 1 </mat-tab>
+        <mat-tab label="OPTIONS"> Content 2 </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

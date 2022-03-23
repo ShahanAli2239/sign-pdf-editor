@@ -1,0 +1,32 @@
+<!-- Header navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div style="color: blue;" class="container">
+    <button (click)="toggleNav()" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0" id="navbarResponsive" [ngClass]="{'show': navToggle}">
+        <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/add">Add</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/items">Select</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/prepare">Prepare</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/review">Review</a>
+            </li>
+          </ul>
+          <div class="dropdown" style="float:right;">
+            <button class="dropbtn"><i class="fa fa-user" aria-hidden="true"></i></button>
+            <div class="dropdown-content">
+            <a href="#"> Profile</a>
+            <a href="#"> Account Setting</a>
+            <a href="javascript:void(0)" class="nav-link" (click)="logout()"><i class="fas fa-sign-out-alt"></i>  Logout</a>
+            </div>
+          </div>   
+    </div>
+  </div>
+</nav>

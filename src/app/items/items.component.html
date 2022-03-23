@@ -1,0 +1,279 @@
+<!--<br><br>
+<div class="container">
+  <mat-card style="box-shadow: silver;" class="col-sm-16">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Add recipients</h1>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-8">
+        <p><i style="opacity: inherit;" class="fa fa-user" aria-hidden="true"></i> Sender</p>
+      </div>
+      <div class="col-sm-8">
+        <p>signer text</p>
+      </div>
+      
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-8">
+        <p><i style="opacity: inherit;" class="fa fa-user" aria-hidden="true"></i> Recipients</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-8">
+        <p *ngIf="!hasItems(items$ | async)" class="alert alert-danger" role="alert">
+          <Strong>You don't have any Recipient.</Strong><br>
+          Try adding one.
+        </p>
+        <div  class="col-sm-16" *ngIf="isShow">
+          <mat-card >
+              <app-item-add-edit></app-item-add-edit>
+          </mat-card>
+        </div>
+        <app-items-list></app-items-list>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="text-right">
+          <button (click)=showDisplay()><i class="fa fa-user" aria-hidden="true"></i> Add New Recipient </button>
+        </div>
+        <div *ngIf="isShow">
+          <div class="col-md-4">
+            <app-item-add-edit></app-item-add-edit>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </mat-card>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="text-right">
+        <button class="button button2">Back</button>
+        <button class="button button1">Next</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div>
+        <h1>
+          <span class="main-heading">
+            Add Recipients
+          </span>
+        </h1>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-c1">
+        <span class="content-c1-s1">
+          <span class="content-c1-s1-s11">
+            <span class="content-c1-s1-s11-s111">
+              <span class="content-c1-s1-s11-s111-s1111">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">near_me</mat-icon>
+              </span>
+            </span>
+          </span>
+        </span>
+        <div class="content-c1-d1">
+          SENDER
+        </div>
+        <strong>
+          Signer Name
+        </strong>
+      </div>
+      <div class="content-c1">
+        <span class="content-c1-s1">
+          <span class="content-c1-s1-s11">
+            <span class="content-c1-s1-s11-s111">
+              <span class="content-c1-s1-s11-s111-s1111">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+              </span>
+            </span>
+          </span>
+        </span>
+        <div class="content-c1-d1">
+          RECIPIENTS
+        </div>
+        <div>
+          <div class="row">
+            <div>
+              <p *ngIf="!hasItems(items$ | async)" class="alert alert-danger" role="alert">
+                <Strong>You don't have any Recipient.</Strong><br>
+                Try adding one.
+              </p>
+              <div *ngIf="isShow">
+                <mat-card>
+                  <app-item-add-edit></app-item-add-edit>
+                </mat-card>
+              </div>
+              <app-items-list></app-items-list>
+            </div>
+          </div>
+        </div>
+        <!--
+                  <div data-qa="recipients-list" data-rbd-droppable-id="recipientList"
+                      data-rbd-droppable-context-id="0" style="max-width: 1000px;">
+                      <div data-qa="recipient-row" style="margin-bottom: 24px;">
+                          <div data-rbd-draggable-context-id="0" data-rbd-draggable-id="58028327">
+                              <div data-callout="recipient-name">
+                                  <div class="css-116lp2a-RECIPIENT_CARD_ORDERED_CONTAINER_NARROW">
+                                      <div class="css-8jt6mt-RECIPIENT_CARD_CONTAINER">
+                                          <div class="css-33zfwu-RECIPIENT_COLOR"
+                                              style="background-color: rgb(255, 214, 91);"></div>
+                                          <div class="css-1vk0185-RECIPIENT_CARD_NARROW">
+                                              <div class="css-19n6z7y-RECIPIENT_CARD_NARROW_HEADER">
+                                                  <div></div>
+                                                  <div class="css-8mjctm-RECIPIENT_CARD_CONTROLS"
+                                                      style="margin-left: 0px; margin-top: 0px;">
+                                                      <div class="css-1uudw1n-RECIPIENT_CARD_MENU"
+                                                          style="margin-left: 0px;"><button data-qa="recipient-menu"
+                                                              class="olv-button olv-ignore-transform css-gqctlc"
+                                                              type="button" aria-haspopup="true"
+                                                              aria-expanded="false"><span
+                                                                  class="css-1ixbp0l">Customize</span><span
+                                                                  class="css-6hyn49"><span class="css-zf56fy"><span
+                                                                          aria-hidden="true" class="SVGInline"><svg
+                                                                              class="SVGInline-svg"
+                                                                              fill="currentColor"
+                                                                              xmlns="http://www.w3.org/2000/svg"
+                                                                              viewBox="0 0 16 16" focusable="false">
+                                                                              <path d="M4 5h8l-4 6z"></path>
+                                                                          </svg></span></span></span></button></div>
+                                                  </div>
+                                              </div>
+                                              
+                                              <div class="css-8mjctm-RECIPIENT_CARD_CONTROLS"
+                                                  style="margin-left: -10px; margin-top: 16px;">
+                                                  <div class="css-1xc5niq-RECIPIENT_ROLE_SELECT">
+                                                      <div><button data-qa="recipient-type" aria-haspopup="true"
+                                                              class="olv-button olv-ignore-transform css-s6cnqr"
+                                                              type="button" aria-expanded="false"><span
+                                                                  class="css-1k0renl"><span class="css-zf56fy"><span
+                                                                          aria-hidden="true" class="SVGInline"><svg
+                                                                              class="SVGInline-svg"
+                                                                              fill="currentColor"
+                                                                              xmlns="http://www.w3.org/2000/svg"
+                                                                              viewBox="0 0 16 16" focusable="false">
+                                                                              <path
+                                                                                  d="M16 16H0v-1h16zM13.8.3c.4.4.4 1 0 1.4L11 4.5c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4L12.4.3c.3-.4 1-.4 1.4 0zM1.4 9.9L0 14.1l4.2-1.4z">
+                                                                              </path>
+                                                                              <path
+                                                                                  d="M4.9 12L11 5.9l.5-.5.9-.9c.4-.4.4-1 0-1.4L11 1.7c-.4-.4-1-.4-1.4 0l-.9.9-6.6 6.6L4.9 12z">
+                                                                              </path>
+                                                                          </svg></span></span></span><span
+                                                                  class="css-1ixbp0l">Needs to Sign</span><span
+                                                                  class="css-f12cus"><span class="css-brvfq3"><span
+                                                                          class="css-zf56fy"><span aria-hidden="true"
+                                                                              class="SVGInline"><svg
+                                                                                  class="SVGInline-svg"
+                                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                                  viewBox="0 0 16 16"
+                                                                                  focusable="false">
+                                                                                  <path d="M4 5h8l-4 6z"></path>
+                                                                              </svg></span></span></span></span></button>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="dropdown" style="float:right;" style="display: flex;"><span class="dropdown" style="float:right;" class="css-1sbuogi"><button class="dropbtn" data-qa="recipients-add"
+                              class="olv-button olv-ignore-transform css-1ve11xo" type="button"><span
+                                  class="css-1k0renl"><span class="css-ps6lin"><span aria-hidden="true"
+                                          class="SVGInline"><svg class="SVGInline-svg" fill="currentColor"
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                              focusable="false">
+                                              <path
+                                                  d="M10.5 8.5c3 0 5.5 1.5 5.5 3V14H5v-2.5c0-1.5 2.5-3 5.5-3zm0-1a2.75 2.75 0 110-5.5 2.75 2.75 0 010 5.5zM0 3h2V1h2v2h2v2H4v2H2V5H0V3z">
+                                              </path>
+                                          </svg></span></span></span><span class="css-1ixbp0l">Add
+                                  Recipient</span></button><button class="dropbtn" data-qa="recipient-menu-arrow"
+                              class="olv-button olv-ignore-transform css-2kv0wd" type="button"
+                              aria-haspopup="true"><span class="css-1am6aje">Menu</span><span class="css-f10ht6"><span
+                                      class="css-ps6lin"><span aria-hidden="true" class="SVGInline"><svg
+                                              class="SVGInline-svg" fill="currentColor"
+                                              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                              focusable="false">
+                                              <path d="M4 5h8l-4 6z"></path>
+                                          </svg></span></span></span></button></span>
+                                          </div>
+              </div>-->
+        <div class="dropdown" style="float:right;" style="display: flex;">
+          <span class="dropdown" style="float:right;" class="css-1sbuogi">
+            <button class="dropbtn" data-qa="recipients-add"  (click)=showDisplay()
+              class="olv-button olv-ignore-transform css-1ve11xo" type="button">
+              <span class="css-1k0renl">
+                <span class="css-ps6lin">
+                  <span aria-hidden="true" class="SVGInline">
+                    <svg class="SVGInline-svg"
+                      fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false">
+                      <path d="M10.5 8.5c3 0 5.5 1.5 5.5 3V14H5v-2.5c0-1.5 2.5-3 5.5-3zm0-1a2.75 2.75 0 110-5.5 2.75 2.75 0 010 5.5zM0 3h2V1h2v2h2v2H4v2H2V5H0V3z">
+                      </path>
+                    </svg>
+                  </span>
+                </span>
+              </span>
+              <span class="css-1ixbp0l">Add Recipient</span>
+            </button>
+            <button class="dropbtn" data-qa="recipient-menu-arrow"
+              class="olv-button olv-ignore-transform css-2kv0wd" type="button" aria-haspopup="true">
+              <span
+                class="css-1am6aje">Menu</span>
+                <span class="css-f10ht6">
+                  <span class="css-ps6lin">
+                    <span aria-hidden="true" class="SVGInline">
+                      <svg class="SVGInline-svg" fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" focusable="false"><path d="M4 5h8l-4 6z"></path>
+                    </svg>
+                  </span>
+                </span>
+              </span>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="content-c1">
+        <span class="content-c1-s1">
+          <span class="content-c1-s1-s11">
+            <span class="content-c1-s1-s11-s111">
+              <span class="content-c1-s1-s11-s111-s1111">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">check</mat-icon>
+              </span>
+            </span>
+          </span>
+        </span>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div>
+
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-sm-8">
+      <div id="bottom" style="font-size: 10px;" class="text-right">
+        <button class="back-button back-button2">Back</button>
+        <button class="next-button next-button1">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
